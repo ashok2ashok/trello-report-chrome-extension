@@ -14,12 +14,13 @@
         {
             
             "matches": [
-        "https://*/trello*"
+        "*://*/trello*"
       ]
             , "js": ["scripts/jquery-3.2.1.min.js", "scripts/content.js"]
     }
          ],
     "background": {
-    "scripts": ["scripts/background.js"]
+    "scripts": ["scripts/background.js"],
+        "persistent": false
   }
 }
