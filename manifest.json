@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2
+    , "name": "Trello Report"
+    , "description": "This extension generates an uber basic Trello report for the current logged in Trello board"
+    , "version": "1.0"
+    , "browser_action": {
+        "default_icon": "icon.png"
+        , "default_popup": "popup.html"
+    }
+    , "permissions": [
+    "*://trello.com/*", "tabs", "webNavigation"
+  ]
+    , "content_scripts": [
+        {
+            
+            "matches": [
+        "https://*/trello*"
+      ]
+            , "js": ["scripts/jquery-3.2.1.min.js", "scripts/content.js"]
+    }
+         ],
+    "background": {
+    "scripts": ["scripts/background.js"]
+  }
+}
